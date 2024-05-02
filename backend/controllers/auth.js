@@ -3,7 +3,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 export const register = async (req, res) => {
-  const { email, password, role } = req.body;
+  const { email, password } = req.body;
 
   //check all fields
   if (!email || !password)
@@ -34,7 +34,7 @@ export const register = async (req, res) => {
       });
     const encryptedPass = await bcrypt.hash(password, 12);
 
-    const newUser = User({ email, password: encryptedPass, role: role });
+    const newUser = User({ email, password: encryptedPass, role: "Learner" });
 
     //save user
     const result = await newUser.save();
