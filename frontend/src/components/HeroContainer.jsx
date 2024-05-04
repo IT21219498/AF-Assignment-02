@@ -10,7 +10,6 @@ const HeroContainer = ({ children, url }) => {
         muted
       >
         <source src={url} type='video/mp4' />
-        {/* Add additional source elements for different video formats */}
         Your browser does not support the video tag.
       </video>
       <div className='absolute inset-0 bg-black opacity-50'></div>
