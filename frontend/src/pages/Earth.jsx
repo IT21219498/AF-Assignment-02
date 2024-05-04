@@ -12,7 +12,7 @@ function Earth() {
     setLoading(true);
     try {
       const response = await fetch(
-        `https://api.nasa.gov/planetary/earth/imagery?lon=-95.33&lat=29.78&date=${date}&dim=0.15&api_key=DEMO_KEY`
+        `https://api.nasa.gov/planetary/earth/imagery?lon=-95.33&lat=29.78&date=${date}&dim=0.15&api_key=Iz8C0yNbWJs0BSL1vfcviwLh594UoEzqh8yxOv8m`
       );
       const data = await response;
       console.log("🚀 ~ handleFetchImage ~ data:", data);
