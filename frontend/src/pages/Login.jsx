@@ -98,6 +98,7 @@ export default function Login() {
               <button
                 type='submit'
                 className='w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                style={{ backgroundColor: "#0b3d91" }}
               >
                 Sign in
               </button>
@@ -108,7 +109,7 @@ export default function Login() {
             Don&apos;t have an account?{" "}
             <Link
               to='/register'
-              className='font-semibold leading-6 text-black hover:text-indigo-700'
+              className='font-semibold leading-6 text-white hover:text-black'
             >
               Sign up here
             </Link>
