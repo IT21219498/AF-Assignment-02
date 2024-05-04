@@ -43,20 +43,20 @@ export default function Register() {
   return (
     <HeroContainer url={Video}>
       <div className='flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 font-mono	'>
-        <div className='sm:mx-auto sm:w-full sm:max-w-sm border p-6 rounded-md shadow-lg'>
+        <div className=' bg-gradient-to-r from-white sm:mx-auto sm:w-full sm:max-w-sm border p-6 rounded-md shadow-lg'>
           <img
             className='mx-auto h-10 w-auto'
             src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png'
             alt='Your Company'
           />
-          <h2 className='text-2xl font-bold text-center text-white mb-4'>
+          <h2 className='text-2xl font-bold text-center text-black mb-4'>
             Create your account
           </h2>
           <form onSubmit={handleSubmit} className='space-y-6'>
             <div>
               <label
                 htmlFor='email'
-                className='block text-sm font-medium leading-6 text-gray-500'
+                className='block text-sm font-medium leading-6 text-gray-900'
               >
                 Email address
               </label>
@@ -74,7 +74,7 @@ export default function Register() {
             <div>
               <label
                 htmlFor='password'
-                className='block text-sm font-medium leading-6 text-gray-500'
+                className='block text-sm font-medium leading-6 text-gray-900'
               >
                 Password
               </label>
@@ -92,7 +92,7 @@ export default function Register() {
             <div>
               <label
                 htmlFor='confirmPassword'
-                className='block text-sm font-medium leading-6 text-gray-500'
+                className='block text-sm font-medium leading-6 text-gray-900'
               >
                 Confirm Password
               </label>
@@ -110,15 +110,16 @@ export default function Register() {
             <button
               type='submit'
               className='w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+              style={{ backgroundColor: "#0b3d91" }}
             >
               Register
             </button>
           </form>
-          <p className='mt-6 text-center text-sm text-gray-500'>
+          <p className='mt-6 text-center text-sm text-gray-900'>
             Already have an account?{" "}
             <Link
               to='/login'
-              className='font-semibold leading-6 text-indigo-600 hover:text-indigo-500'
+              className='font-semibold leading-6 text-white hover:text-black'
             >
               Sign in here
             </Link>
