@@ -23,7 +23,6 @@ const Home = () => {
           Welcome to NASA Explorer
         </h1>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mx-10 mt-64'>
-          {/* Card 1 */}
           <div className='bg-gradient-to-r from-white border rounded-lg shadow-lg p-4 mx-10'>
             <h2 className='text-xl font-semibold mb-2'>Mars Rover Photos</h2>
             <p className='text-gray-700 mb-4'>
@@ -37,7 +36,6 @@ const Home = () => {
             </button>
           </div>
 
-          {/* Card 2 */}
           <div className='bg-gradient-to-r from-white border rounded-lg shadow-lg p-4 mx-10'>
             <h2 className='text-xl  font-semibold mb-2'>APOD</h2>
             <p className='text-gray-700 mb-4'>
@@ -50,8 +48,6 @@ const Home = () => {
               Explore
             </button>
           </div>
-
-          {/* Card 3 */}
           <div className='bg-gradient-to-r from-white border rounded-lg shadow-lg p-4 mx-10'>
             <h2 className='text-xl font-semibold mb-2'>Earth</h2>
             <p className='text-gray-700 mb-4'>
