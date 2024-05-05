@@ -14,11 +14,22 @@ export default function Register() {
   const { registerUser } = useContext(AuthContext);
   const { toast } = useContext(ToastContext);
 
+  /**
+   * Handles the input change event.
+   *
+   * @param {Object} event - The input change event object.
+   */
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setCredentials({ ...credentials, [name]: value });
   };
 
+  /**
+   * Handles the form submission for user registration.
+   *
+   * @param {Event} event - The form submission event.
+   * @returns {void}
+   */
   const handleSubmit = (event) => {
     event.preventDefault();
     if (
