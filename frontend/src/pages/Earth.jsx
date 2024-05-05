@@ -64,35 +64,21 @@ function Earth() {
 
   return (
     <HeroContainer url={Video}>
-      <div className='flex flex-col items-center justify-center h-screen '>
-        <h1 className='text-3xl font-bold flex justify-center text-white mb-4 mt-32 '>
+      <div className='flex flex-col items-center justify-center h-screen px-4 md:px-0'>
+        <h1 className='text-2xl md:text-3xl font-bold flex justify-center text-white mb-4 mt-44'>
           Earth Imagery
         </h1>
-        <div className='mb-6'>
-          {/* <input
-            type='text'
-            placeholder='Longitude'
-            value={lon}
-            onChange={(e) => setLon(e.target.value)}
-            className='border border-gray-300 rounded-md px-4 py-2 mr-2'
-          />
-          <input
-            type='text'
-            placeholder='Latitude'
-            value={lat}
-            onChange={(e) => setLat(e.target.value)}
-            className='border border-gray-300 rounded-md px-4 py-2 mr-2'
-          /> */}
+        <div className='mb-6 flex flex-col md:flex-row'>
           <input
             type='date'
             placeholder='Date (YYYY-MM-DD)'
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            className='border border-gray-300 rounded-md px-4 py-2 mr-2'
+            className='border border-gray-300 rounded-md px-4 py-2 mb-2 md:mb-0 md:mr-2'
           />
           <button
             onClick={handleFetchImage}
-            className='bg-gray-800 border text-white rounded-md px-4 py-2'
+            className='bg-gray-800 border text-white rounded-md px-4 py-2 mb-2 md:mb-0'
           >
             Fetch Image
           </button>
@@ -110,7 +96,7 @@ function Earth() {
             <img
               src={imageUrl}
               alt='Earth'
-              className='h-screen border p-5 bg-white rounded-md shadow-lg object-cover'
+              className='w-full md:h-screen border p-5 bg-white rounded-md shadow-lg object-cover  md:mx-2 md:w-1/2 md:h-auto'
             />
           )
         )}
