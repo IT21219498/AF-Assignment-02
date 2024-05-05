@@ -18,7 +18,7 @@ export const AuthContextProvider = ({ children }) => {
   //check user is logged in
   const checkUserLoggedIn = async () => {
     try {
-      const res = await fetch(`http://localhost:8002/api/me`, {
+      const res = await fetch(`https://af-assignment-02.onrender.com/api/me`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -48,7 +48,7 @@ export const AuthContextProvider = ({ children }) => {
   //login request
   const loginUser = async (userData) => {
     try {
-      const res = await fetch(`http://localhost:8002/api/login`, {
+      const res = await fetch(`https://af-assignment-02.onrender.com/api/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -71,7 +71,7 @@ export const AuthContextProvider = ({ children }) => {
   //register request
   const registerUser = async (userData) => {
     try {
-      const res = await fetch(`http://localhost:8002/api/register`, {
+      const res = await fetch(`https://af-assignment-02.onrender.com/api/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
