@@ -4,6 +4,14 @@ import AuthContext from "../context/AuthContext";
 import HeroContainer from "../components/HeroContainer";
 import Video from "../videos/Home.mp4";
 
+/**
+ * Home component represents the home page of the application.
+ * It displays a hero section with a welcome message and three sections for exploring different features.
+ *
+ * @component
+ * @example
+ * return <Home />;
+ */
 const Home = () => {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
@@ -25,7 +33,7 @@ const Home = () => {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mx-10 mt-64'>
           <div className='bg-gradient-to-r from-white border rounded-lg shadow-lg p-4 mx-10'>
             <h2 className='text-xl font-semibold mb-2'>Mars Rover Photos</h2>
-            <p className='text-gray-700 mb-4'>
+            <p className='text-black mb-4 '>
               Explore the latest photos captured by Mars rovers.
             </p>
             <button
@@ -38,9 +46,7 @@ const Home = () => {
 
           <div className='bg-gradient-to-r from-white border rounded-lg shadow-lg p-4 mx-10'>
             <h2 className='text-xl  font-semibold mb-2'>APOD</h2>
-            <p className='text-gray-700 mb-4'>
-              Discover the Astronomy Picture of the Day.
-            </p>
+            <p className='mb-4'>Discover the Astronomy Picture of the Day.</p>
             <button
               onClick={() => handleExplore("/apod")}
               className='bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500'
@@ -50,7 +56,7 @@ const Home = () => {
           </div>
           <div className='bg-gradient-to-r from-white border rounded-lg shadow-lg p-4 mx-10'>
             <h2 className='text-xl font-semibold mb-2'>Earth</h2>
-            <p className='text-gray-700 mb-4'>
+            <p className='text-black mb-4'>
               Unlock the beauty of our planet with satellite imagery.
             </p>
             <button

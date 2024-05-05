@@ -18,6 +18,12 @@ export default function Login() {
     setCredentials({ ...credentials, [name]: value });
   };
 
+  /**
+   * Handles the form submission for the login page.
+   *
+   * @param {Event} event - The form submission event.
+   * @returns {void}
+   */
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!credentials.email || !credentials.password) {

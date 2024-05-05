@@ -3,6 +3,10 @@ import Video from "../videos/Mars.mp4";
 import HeroContainer from "../components/HeroContainer";
 import Loading from "../components/Loading";
 
+/**
+ * Renders a page displaying Mars rover photos fetched from the NASA API.
+ * @returns {JSX.Element} The Mars component.
+ */
 function Mars() {
   const [photos, setPhotos] = useState([]);
   const [page, setPage] = useState(1);
@@ -11,6 +15,10 @@ function Mars() {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    /**
+     * Fetches Mars photos from the NASA API.
+     * @returns {Promise<void>} A promise that resolves when the photos are fetched.
+     */
     const fetchMarsPhotos = async () => {
       try {
         setIsLoading(true); // Set isLoading to true before fetching data
@@ -42,6 +50,11 @@ function Mars() {
     setPage(pageNumber);
   };
 
+  /**
+   * Handles the camera filter selection.
+   *
+   * @param {string} camera - The camera to be filtered.
+   */
   const handleCameraFilter = (camera) => {
     setIsLoading(true);
     setFilterCameras((prevFilterCameras) => {
@@ -63,6 +76,10 @@ function Mars() {
     page * photosPerPage
   );
 
+  /**
+   * Renders the pagination numbers for the Mars page.
+   * @returns {Array<JSX.Element>} An array of JSX elements representing the pagination numbers.
+   */
   const renderPaginationNumbers = () => {
     const paginationNumbers = [];
     for (let i = 1; i <= totalPages; i++) {
@@ -83,6 +100,10 @@ function Mars() {
     return paginationNumbers;
   };
 
+  /**
+   * Renders the camera filters based on the photos array.
+   * @returns {JSX.Element[]} An array of JSX elements representing the camera filters.
+   */
   const renderCameraFilters = () => {
     const cameras = [...new Set(photos.map((photo) => photo.camera.name))];
     return cameras.map((camera) => (

@@ -7,6 +7,10 @@ function APOD() {
   const [apodData, setApodData] = useState(null);
 
   useEffect(() => {
+    /**
+     * Fetches the Astronomy Picture of the Day (APOD) data from the NASA API.
+     * @returns {Promise<void>} A Promise that resolves when the data is fetched and set.
+     */
     const fetchAPOD = async () => {
       try {
         const response = await fetch(
