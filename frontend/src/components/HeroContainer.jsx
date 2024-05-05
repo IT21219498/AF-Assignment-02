@@ -2,15 +2,15 @@ import PropTypes from "prop-types";
 
 const HeroContainer = ({ children, url }) => {
   return (
-    <div className='relative h-screen shadow-2xl'>
+    <div className='relative h-screen bg-black-100'>
       <video
-        className='absolute inset-0 w-full object-cover 
-        '
+        className='absolute inset-0 w-full h-full object-cover'
         autoPlay
         loop
         muted
       >
         <source src={url} type='video/mp4' />
+        {/* Add additional source elements for different video formats */}
         Your browser does not support the video tag.
       </video>
       <div className='absolute inset-0 bg-black opacity-50'></div>
