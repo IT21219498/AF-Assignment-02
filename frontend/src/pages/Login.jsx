@@ -1,7 +1,7 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import AuthContext from "../context/AuthContext";
 import ToastContext from "../context/ToastContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import HeroContainer from "../components/HeroContainer";
 import Video from "../videos/Login.mp4";
 
@@ -10,8 +10,16 @@ export default function Login() {
     email: "",
     password: "",
   });
-  const { loginUser } = useContext(AuthContext);
+  const { loginUser, user } = useContext(AuthContext);
   const { toast } = useContext(ToastContext);
+  const navigate = useNavigate();
+
+  //if user is already logged in, redirect to home page
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    }
+  }, [user]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
