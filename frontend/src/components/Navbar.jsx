@@ -10,7 +10,10 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className='bg-gray-800 font-mono	' aria-label='Main navigation'>
+    <nav
+      className='bg-gray-900 font-mono	border border-black'
+      aria-label='Main navigation'
+    >
       <div className='max-w-7x2 px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-16'>
           <div className='flex items-center'>
@@ -28,12 +31,6 @@ const Navbar = () => {
             <div className='hidden text-white md:block'>
               <div className='ml-4 flex items-center md:ml-6'>
                 <>
-                  <Link
-                    to='/'
-                    className='text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'
-                  >
-                    Home
-                  </Link>
                   <Link
                     to='/mars'
                     className='text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'
