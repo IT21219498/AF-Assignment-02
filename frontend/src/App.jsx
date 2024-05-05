@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import APOD from "./pages/APOD";
 import Earth from "./pages/Earth";
 import Mars from "./pages/Mars";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path='/apod' element={<APOD />} />
             <Route path='/earth' element={<Earth />} />
             <Route path='/mars' element={<Mars />} />
+            <Route path='/about' element={<AboutUs />} />
           </Routes>
         </Layout>
       </AuthContextProvider>
