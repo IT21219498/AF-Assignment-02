@@ -28,6 +28,37 @@ const Navbar = () => {
             <div className='hidden text-white md:block'>
               <div className='ml-4 flex items-center md:ml-6'>
                 <>
+                  <Link
+                    to='/'
+                    className='text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    to='/mars'
+                    className='text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'
+                  >
+                    Mars-Rover-Photos
+                  </Link>
+                  <Link
+                    to='/apod'
+                    className='text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'
+                  >
+                    APOD
+                  </Link>
+                  <Link
+                    to='/earth'
+                    className='text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'
+                  >
+                    Earth
+                  </Link>
+                  <Link
+                    to='/about'
+                    className='text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'
+                  >
+                    About Us
+                  </Link>
+
                   <button
                     onClick={() => {
                       setUser(null);
@@ -35,7 +66,7 @@ const Navbar = () => {
                       toast.success("Logged out successfully!");
                       navigate("/login", { replace: true });
                     }}
-                    className='inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-900 hover:bg-white mt-4 lg:mt-0'
+                    className='inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-900 hover:bg-white mt-4 lg:mt-0 mx-4'
                   >
                     Logout
                   </button>
