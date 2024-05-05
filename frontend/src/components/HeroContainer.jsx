@@ -2,9 +2,10 @@ import PropTypes from "prop-types";
 
 const HeroContainer = ({ children, url }) => {
   return (
-    <div className='relative h-screen'>
+    <div className='relative h-screen shadow-2xl'>
       <video
-        className='absolute inset-0 w-full object-cover'
+        className='absolute inset-0 w-full object-cover 
+        '
         autoPlay
         loop
         muted
